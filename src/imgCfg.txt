@@ -1,5 +1,5 @@
 searchBar 80 10 10 0
-leftPanelBackground 20 80 0 10
+leftPanelBackground 10 80 0 10
 specButton 10 10 0 90
-rightPanelBackground 20 80 80 10
+rightPanelBackground 10 80 90 10
 bottomBar 80 10 10 90
