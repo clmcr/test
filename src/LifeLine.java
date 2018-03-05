@@ -1,6 +1,6 @@
-import javafx.scene.shape.Circle;
 
 import java.awt.*;
+import java.awt.geom.Ellipse2D;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -27,7 +27,7 @@ public class LifeLine
         private Time startTime;
         private Time endTime;
         private int size;
-        private Circle circle;
+        private Ellipse2D circle;
         private Color color;
         private int length;
         public Bubble(String data, Time startTime, Time endTime, int size, Color color){
@@ -36,7 +36,7 @@ public class LifeLine
             setEndTime(endTime);
             setSize(size);
             setColor(color);
-            setCircle(new Circle(size));
+            setEllipse2D(new Ellipse2D.Double(0,0,size,size));
             setLength(endTime.compareTo(startTime));
         }
 
@@ -64,7 +64,7 @@ public class LifeLine
             this.data = data;
         }
 
-        public void setCircle(Circle circle) {
+        public void setEllipse2D(Ellipse2D circle) {
             this.circle = circle;
         }
 
@@ -80,7 +80,7 @@ public class LifeLine
             return size;
         }
 
-        public Circle getCircle() {
+        public Ellipse2D getEllipse2D() {
             return circle;
         }
 

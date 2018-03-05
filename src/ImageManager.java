@@ -47,7 +47,7 @@ public class ImageManager extends Canvas implements Runnable
         jFrame.setVisible(true);
     }
 
-    private LifeLine line = LifeLifeClientTest.testLifeLine();
+    private LifeLine line = testLifeLine();
 
     @Override
     public void run(){
@@ -97,10 +97,9 @@ public class ImageManager extends Canvas implements Runnable
                 graphics2D.setColor(bubble.getColor());
                 graphics2D.draw(list.get(index));
                 if(!already.contains(bubble)) {
-                    bubble.getCircle().setCenterX((list.get(index).getX1() + list.get(index).getX2()) / 2);
-                    bubble.getCircle().setCenterY((list.get(index).getY1() + list.get(index).getY2()) / 2 + 10);
-                    Ellipse2D e = new Ellipse2D.Double(bubble.getCircle().getCenterX(), bubble.getCircle().getCenterY(), bubble.getCircle().getRadius() * 2, bubble.getCircle().getRadius() * 2);
-                    g.drawString(bubble.getData(), (int) bubble.getCircle().getCenterX(), (int) bubble.getCircle().getCenterY());
+                    Ellipse2D e = new Ellipse2D.Double((list.get(index).getX1() + list.get(index).getX2()) / 2, (list.get(index).getY1() + list.get(index).getY2()) / 2 + 10,
+                            bubble.getEllipse2D().getWidth(), bubble.getEllipse2D().getWidth());
+                    g.drawString(bubble.getData(), (int) (list.get(index).getX1() + list.get(index).getX2()) / 2, (int) (list.get(index).getY1() + list.get(index).getY2()) / 2 + 10);
                     graphics2D.draw(e);
                     already.add(bubble);
                 }
