@@ -1,0 +1,5 @@
+searchBar src\ImagesTemp\searchBar.gif
+bottomBar src\ImagesTemp\bottomBar.gif
+leftPanelBackground src\ImagesTemp\leftPanelBackground.gif
+rightPanelBackground src\ImagesTemp\rightPanelBackground.gif
+specButton src\ImagesTemp\specButton.gif
